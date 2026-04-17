@@ -4,7 +4,9 @@ Production-style 3D viewer built with Babylon.js + React + TypeScript.
 
 ## Live demo
 
-Deploy this repo with Vercel or Netlify to get the required public URL.
+**Production:** [https://part-view-3d.vercel.app/](https://part-view-3d.vercel.app/) (Vercel).
+
+To deploy your own fork, see [Deployment notes](#deployment-notes) below.
 
 ## Local setup
 
@@ -70,7 +72,11 @@ npm run preview
 
 ### Vercel
 
-1. Import project into Vercel.
-2. Framework preset: `Vite`.
+This project is deployed on [Vercel](https://vercel.com/). The live app is at [https://part-view-3d.vercel.app/](https://part-view-3d.vercel.app/).
+
+To deploy from this repository:
+
+1. Import the project into Vercel.
+2. Framework preset: **Vite**.
 3. Build command: `npm run build`.
 4. Output directory: `dist`.
