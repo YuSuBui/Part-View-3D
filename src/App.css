@@ -1,0 +1,139 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.toolbar h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid #2d3748;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.viewer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.viewer-frame {
+  position: relative;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  min-height: 24rem;
+}
+
+.viewer-frame canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  outline: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+
+.error-overlay {
+  background: rgba(127, 29, 29, 0.9);
+  color: #ffffff;
+  gap: 0.75rem;
+}
+
+.info-panel {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.info-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.info-panel dl {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.info-panel dt {
+  font-weight: 700;
+  color: #334155;
+}
+
+.info-panel dd {
+  margin: 0.2rem 0 0;
+  color: #0f172a;
+}
+
+.empty-state {
+  color: #475569;
+}
+
+.mobile-tip,
+.shortcut-note {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.shortcut-note kbd {
+  border: 1px solid #94a3b8;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.3rem;
+  background: #f1f5f9;
+}
+
+@media (max-width: 900px) {
+  .viewer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .viewer-frame {
+    min-height: 20rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
